@@ -49,12 +49,12 @@ header img {
 }
 /* the styles for the form */
 fieldset {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-top: .5em;
+    
+    margin-bottom: .5em;
+    padding: .5em 1em;
 }
 legend {
-    color: green;
+    color: black;
     font-weight: bold;
     font-size: 85%;
 }
@@ -68,8 +68,8 @@ input, select {
     margin-left: 0.5em;
     margin-bottom: 0.5em;
 }
-input:required, input[required] {
-	border: 3px solid red;
+input:required, input[required], input:invalid {
+	border: 2px solid #800000;
 }
 input:valid {
 	border: 1px solid black;
@@ -82,7 +82,32 @@ br {
 }
 #buttons input {
 	width: 10em;
+	height: 30px;
 }
+
+/* Added Styles For forms*/
+#paybuttons {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 95%;
+}
+
+#paybuttons label {
+	text-align: left;
+}
+#paybuttons input {
+	width: 20px;
+}
+
+#expiryMon {
+	width: 7em;
+}
+#expiryYear {
+	width: 5em;
+}
+
+
 /* the styles for the navigation bar */
 nav {
 	clear: left;
