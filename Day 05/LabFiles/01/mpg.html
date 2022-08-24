@@ -13,6 +13,7 @@
 					alert("Miles should be a number greater than 0")
 				}
 	   }while(miles<0||isNaN(miles))
+
 	    do{
 			var gallons = prompt("Enter gallons of gas used");
 			gallons = parseFloat(gallons)
@@ -21,6 +22,7 @@
 					alert("Gallons  should be a number greater than 0")
 				}
 		}while(gallons<0||isNaN(gallons))
+		
 		var mpg = miles/gallons;
 		mpg = parseInt(mpg);
 		alert("Miles per gallon = " + mpg);
