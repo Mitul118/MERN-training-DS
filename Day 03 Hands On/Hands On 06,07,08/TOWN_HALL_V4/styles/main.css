@@ -63,35 +63,31 @@ header img {
 /* the styles for the navigation bar */
 nav {
 	clear: left;
-	margin: 0;
-	padding: 0;
-	border-bottom: 3px solid #800000;
-	background-color: #800000;
 }
 
 nav ul {
-	margin-left: 0;
-	margin-bottom: .5em;
 	list-style: none;
-	padding: .5em 2em 0 0;
-
+	padding: 1em 0;
+	/* padding above and below li elements */
+	background-color: #800000;
 }
 
 nav li {
 	display: inline;
-	padding: 0 1.5em;
-	border-right: 2px solid #fffded;
+}
+
+nav a {
+	padding: 1em 2em;
+	text-decoration: none;
+	color: #fffded;
 	font-weight: bold;
+	border-right: 2px solid #fffded;
 }
 
 nav a.current {
 	color: yellow;
 }
 
-nav a {
-	color: #fffded;
-	text-decoration: none;
-}
 
 /* the styles for the section */
 section {
