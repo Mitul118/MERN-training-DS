@@ -410,15 +410,32 @@ Type "it" for more
 
 
 12 
-blazeclan> db.employees.find({"department_id" : {$in : [20, 50]}, "salary" : {$gte : 5000 , $lte:12000}}, {"last_name" : true, "salary" : true}).sort({"first_name" : 1})
+
+blazeclan> db.employees.find({$and:[{$or:[{"department_id":20},{"department_id":50}]},{$or:[{"salary":{$lt:5000}},{"salary":{$gt:12000}}]}]},{"last_name":1,"salary":1,"_id":0}).sort({"first_name":1})
 [
-  { _id: 121, last_name: 'Fripp', salary: 8200 },
-  { _id: 124, last_name: 'Mourgos', salary: 5800 },
-  { _id: 120, last_name: 'Weiss', salary: 8000 },
-  { _id: 202, last_name: 'Fay', salary: 6000 },
-  { _id: 122, last_name: 'Kaufling', salary: 7900 },
-  { _id: 123, last_name: 'Vollman', salary: 6500 }
+  { last_name: 'Walsh', salary: 3100 },
+  { last_name: 'Bull', salary: 4100 },
+  { last_name: 'Cabrio', salary: 3000 },
+  { last_name: 'Everett', salary: 3900 },
+  { last_name: 'Davies', salary: 3100 },
+  { last_name: 'OConnell', salary: 2600 },
+  { last_name: 'Grant', salary: 2600 },
+  { last_name: 'Geoni', salary: 2800 },
+  { last_name: 'Philtanker', salary: 2200 },
+  { last_name: 'Mikkilineni', salary: 2700 },
+  { last_name: 'Landry', salary: 2400 },
+  { last_name: 'Marlow', salary: 2500 },
+  { last_name: 'Mallin', salary: 3300 },
+  { last_name: 'Fleaur', salary: 3100 },
+  { last_name: 'Dilly', salary: 3600 },
+  { last_name: 'Seo', salary: 2700 },
+  { last_name: 'Patel', salary: 2500 },
+  { last_name: 'Nayer', salary: 3200 },
+  { last_name: 'Dellinger', salary: 3400 },
+  { last_name: 'Chung', salary: 3800 }
 ]
+Type "it" for more
+
 
 
 13
@@ -498,6 +515,9 @@ blazeclan> db.employees.find({$and:[{last_name:/e/},{last_name:/a/}]},{"last_nam
   { last_name: 'Baer' }
 ]
 
+17
+
+blazeclan> db.employees.find({first_name:/^p/},{"last_name":1})
 
 18
 blazeclan> db.employees.find({first_name:/ll/},{"first_name":1,"last_name":1,"salary":1,"_id":0})
