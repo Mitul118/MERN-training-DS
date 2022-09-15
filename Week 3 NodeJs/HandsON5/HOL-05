@@ -1,0 +1,31 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| pubs               |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.15 sec)
+
+mysql> CREATE DATABASE HR_DB;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| hr_db              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| pubs               |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+8 rows in set (0.01 sec)

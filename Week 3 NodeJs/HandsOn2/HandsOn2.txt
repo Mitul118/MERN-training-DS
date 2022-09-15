@@ -1,0 +1,32 @@
+6
+A)
+
+> var proObj = new Promise(function(){});
+undefined
+> proObj
+Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 644,
+  [Symbol(trigger_async_id_symbol)]: 5,
+  [Symbol(destroyed)]: { destroyed: false }
+}
+
+> Promise.__proto__
+{}
+> proObj.__proto__
+Object [Promise] {}
+
+B)
+> var promObj = new Promise((resolve,reject) => {
+... resolve("I am getting resolved!");
+... reject("Oops rejected!");
+... }
+... )
+
+> promObj
+Promise {
+  'I am getting resolved!',
+  [Symbol(async_id_symbol)]: 1432,
+  [Symbol(trigger_async_id_symbol)]: 5,
+  [Symbol(destroyed)]: { destroyed: false }
+}
