@@ -1,0 +1,9 @@
+C:\Users\mitul.gupta>node
+Welcome to Node.js v16.16.0.
+Type ".help" for more information.
+> const nums = [1,2,3,4,5]
+undefined
+> const numSq = nums.map(x=>x*x);
+undefined
+> numSq
+[ 1, 4, 9, 16, 25 ]
