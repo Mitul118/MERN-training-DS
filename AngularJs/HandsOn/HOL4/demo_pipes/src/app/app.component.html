@@ -1,0 +1,60 @@
+<h1>Demo {{title}}</h1>
+
+<h2>Custom Pipes</h2>
+
+<h4>Capitalize Pipe</h4>
+<div>
+  <p>{{proverb | capitalize}}</p>
+</div>
+
+<h4>Multiplier Pipe</h4>
+<div>
+  <p>Amount ^3 is: {{amount | multiplierPipe:3}}</p>
+</div>
+
+
+<h4>Sqrt Pipe</h4>
+<div>
+  <p>Square root of {{amount}} is: {{amount |sqrt}}</p>
+</div>
+
+
+<h4>Reverse Pipe</h4>
+<div>
+  <p>{{proverb | reverse}}</p>
+</div>
+
+<h4>Piglatin Pipe</h4>
+<div>
+  <p>{{proverb | piglatin}}</p>
+</div>
+
+<h4>Myencrypt Pipe</h4>
+<div>
+  <p>{{title | myencrypt}}</p>
+</div>
+
+
+<h4>Using the date pipe</h4>
+<div>
+  <p>Current date: {{today}}</p>
+  <p>Current date: {{today | date}}</p>
+  <p>Current date: {{today | date:'dd/mm/yy'}}</p>
+</div>
+
+
+<h4>Using Currency Pipe</h4>
+<div>
+  <p>The amount is {{amount}}</p>
+  <p>Amount in Euros: {{amount | currency:'EUR'}}</p>
+  <p>Amount in Rupees: {{amount | currency:'INR'}}</p>
+  <p>Amount in Dollars: {{amount | currency:'$'}}</p>
+</div>
+
+
+<h4>Proverb</h4>
+<div>
+  <p>{{proverb}}</p>
+  <p>{{proverb |uppercase}}</p>
+  <p>{{proverb | titlecase}}</p>
+</div>
